@@ -1,6 +1,7 @@
 {
   "expo": {
     "name": "univer",
+    "scheme": "univer",
     "slug": "univer",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -15,16 +16,29 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "googleServicesFile": "./GoogleService-Info.plist",
+      "bundleIdentifier": "com.sanghojeon.univer"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "googleServicesFile": "./google-services.json",
+      "package": "com.sanghojeon.univer"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "@react-native-google-signin/google-signin"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "20eb1395-ec19-4b9f-b54d-77aacfc2bd73"
+      }
+    },
+    "owner": "sanghojeon"
   }
 }
